@@ -10,6 +10,7 @@ urlpatterns = [
     path('about/', views.about, name='about'),
     path('contact/', views.contact, name='contact'),
     path('blog/', views.blog, name='blog'),
+    path('notice/',views.notice,name='notice'),
 
     #dynamic urls : check dynamic_url_work.py for more clearification 
 

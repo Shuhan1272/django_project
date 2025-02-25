@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Notice Board
+{% endblock %}
+
+{% block content %}
+<main class="flex-1 ml-64 p-8">
+    <section>
+        <h2>Notice board.</h2>
+        <br><br>
+            {% for notice_obj in notices %}
+                <ol>
+                    <li>Title : {{notice_obj.title}}</li>
+                    <li>Content : {{notice_obj.content}}</li>
+                    <li>Writer : {{notice_obj.author}}</li>
+                    <li>Created at : {{notice_obj.created_at}}</li>
+                    <a href="{{notice_obj.attachments.url}}" style="text-decoration:underline;">See Notice file here.</a>
+                    {% comment %} Note for opening media file I need to write the save url.url django will automatically generate the path {% endcomment %}
+                </ol>
+                <br><br>
+            {% endfor %}
+        
+    </section>
+</main>
+{% endblock %}

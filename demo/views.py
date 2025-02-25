@@ -73,4 +73,11 @@ def greet(request, mynum,p,person):
 
 def favnum(request, n):
     return HttpResponse('Your favorite number is: ' + str(n))
+
+
+def notice(request):
+    #getting notice from the database 
+    notices = models.Notice.objects.all()
+    print(notices)
+    return render(request,'notice.html',{'notices' : notices}) #passing notices as context 
     
