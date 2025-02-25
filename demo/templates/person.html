@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<main class="flex-1 ml-64 p-8">
+    <h1 class="heading">Hello {{ person|title }}</h1>
+    <p class="number">You want to display: {{display}}</p>
+    <p>Page Number: {{page_number}}</p>
+</main>
+{% endblock %}

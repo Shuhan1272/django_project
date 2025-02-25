@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post - My Blog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <!-- Header -->
+    <header class="bg-white shadow-md fixed w-full top-0 z-50">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <h1 class="text-2xl font-bold text-gray-800">My Blog</h1>
+                <div class="flex items-center space-x-4">
+                    <input type="search" placeholder="Search..." class="px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <button class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition duration-200">Search</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sidebar and Main Content Container -->
+    <div class="flex min-h-screen pt-20">
+        <!-- Sidebar Navigation -->
+        <aside class="w-64 bg-white shadow-md fixed h-full left-0 overflow-y-auto">
+            <nav class="p-4">
+                <ul class="space-y-2">
+                    <li>
+                        <a href="home.html" class="flex items-center space-x-2 p-2 bg-blue-50 rounded-lg text-blue-600 transition duration-200">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                            </svg>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="about.html" class="flex items-center space-x-2 p-2 hover:bg-blue-50 rounded-lg text-gray-700 hover:text-blue-600 transition duration-200">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            <span>About</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="contact.html" class="flex items-center space-x-2 p-2 hover:bg-blue-50 rounded-lg text-gray-700 hover:text-blue-600 transition duration-200">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                            <span>Contact</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="blog.html" class="flex items-center space-x-2 p-2 hover:bg-blue-50 rounded-lg text-gray-700 hover:text-blue-600 transition duration-200">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9.5a2 2 0 00-2-2h-2" />
+                            </svg>
+                            <span>Blog</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 ml-64 p-8">
+            <article class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="https://picsum.photos/1200/400?random=13" alt="Blog post" class="w-full h-64 object-cover">
+                <div class="p-8">
+                    <div class="flex items-center mb-4">
+                        <img src="https://avatar.iran.liara.run/public" alt="Author" class="w-10 h-10 rounded-full mr-4">
+                        <div>
+                            <h3 class="font-medium text-gray-800">John Doe</h3>
+                            <span class="text-sm text-gray-500">Posted on January 15, 2024</span>
+                        </div>
+                    </div>
+                    <h1 class="text-3xl font-bold text-gray-800 mb-4">Getting Started with TailwindCSS</h1>
+                    <div class="prose max-w-none">
+                        <p class="text-gray-600 mb-4">TailwindCSS has revolutionized the way we write CSS. In this comprehensive guide, we'll explore how to set up TailwindCSS in your project and leverage its utility-first approach to create beautiful, responsive designs.</p>
+                        <h2 class="text-2xl font-semibold text-gray-800 mt-6 mb-4">Why Choose TailwindCSS?</h2>
+                        <p class="text-gray-600 mb-4">TailwindCSS provides a highly customizable, low-level CSS framework that gives you all the building blocks you need to build bespoke designs without any annoying opinionated styles you have to fight to override.</p>
+                        <blockquote class="border-l-4 border-blue-500 pl-4 my-6 italic text-gray-700">"TailwindCSS is the only framework that I've seen scale on large teams. It's easy to customize, adapts to any design, and the build size is tiny." - Adam Wathan</blockquote>
+                        <h2 class="text-2xl font-semibold text-gray-800 mt-6 mb-4">Getting Started</h2>
+                        <p class="text-gray-600 mb-4">To get started with TailwindCSS, you'll need to install it via npm:</p>
+                        <pre class="bg-gray-100 p-4 rounded-lg mb-4"><code>npm install tailwindcss</code></pre>
+                    </div>
+                    <div class="mt-8 pt-8 border-t border-gray-200">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-4">
+                                <button class="flex items-center space-x-2 text-gray-500 hover:text-blue-500">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                                    </svg>
+                                    <span>Like</span>
+                                </button>
+                                <button class="flex items-center space-x-2 text-gray-500 hover:text-blue-500">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                                    </svg>
+                                    <span>Comment</span>
+                                </button>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <button class="flex items-center space-x-2 text-gray-500 hover:text-blue-500">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
+                                    </svg>
+                                    <span>Share</span>
+                                </button>
+                                <button class="flex items-center space-x-2 text-gray-500 hover:text-blue-500">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
+                                    </svg>
+                                    <span>Save</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white shadow-md mt-8 ml-64">
+        <div class="container mx-auto px-4 py-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-gray-600 mb-4 md:mb-0">
+                    © 2024 My Blog. All rights reserved.
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-600 hover:text-blue-500 transition duration-200">Privacy Policy</a>
+                    <a href="#" class="text-gray-600 hover:text-blue-500 transition duration-200">Terms of Service</a>
+                    <a href="#" class="text-gray-600 hover:text-blue-500 transition duration-200">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

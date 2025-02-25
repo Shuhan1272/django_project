@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Templating Demo</title>
+</head>
+
+<body>
+    <h1>Welcome to Django</h1>
+    <h2>Current Location is {{ location }}</h2>
+    <p>Person Name: {{ person.name|title }}</p> 
+
+    {% comment %} object.property | title , use case of template tag in dtl: Note: can't use python method directly in dtl file , for example person.name.lenght is not possible  {% endcomment %}
+
+    <p>Person Age: {{ person.age }}</p>
+    <p>
+        <strong>Hobbies ({{ person.hobbies|length }})</strong>
+        {% comment %} here | length is a dtl tag  {% endcomment %}
+        <ul>
+            {% for hobby in person.hobbies %}
+            <li>{{ hobby }}</li>
+            {% endfor %}
+        </ul>
+    </p>
+    <p> {{person.name|title}} is a 
+        {% if person.gender == 'M' %} 
+        {% comment %} single cotation and double cotation is not a problem during comparizon  {% endcomment %}
+        {% comment %} boolean comparizon is also not a problem  {% endcomment %}
+        Male
+        {% elif person.gender == 'F' %}
+        Female
+        {% else %}
+        Non Binary
+        {% endif %}
+    </p>
+</body>
+
+</html>
